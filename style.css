@@ -7,10 +7,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    background: linear-gradient(45deg, #404040 25%, transparent 25%), linear-gradient(315deg, #404040 25%, transparent 25%),linear-gradient(45deg, transparent 24%,#333 25%, #333 45%, transparent 45%), linear-gradient(315deg, transparent 24%,#333 25%, #333 45%, transparent 45%);
+    background-size: 3em 3em;
+    background-color: #404040;
+    opacity: 1
 }
 
 .header {
-    background: linear-gradient(#333, #1110);
+    background: linear-gradient(#000, #1110);
     padding: 20px;
     text-align: center;
 }
@@ -38,7 +43,7 @@ p {
 }
 
 .footer {
-    background: linear-gradient(#1110, #333);
+    background: linear-gradient(#1110, #000);
     text-align: center;
     padding: 10px;
 }
