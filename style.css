@@ -1,0 +1,52 @@
+body {
+    font-family: quicksand;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(#333, #1110);
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    padding: 40px;
+    background: linear-gradient(to bottom right, #1a1a1a, #333);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    flex: 1;
+}
+
+h1 {
+    margin: 0;
+}
+  
+h2 {
+    margin: 0;
+    color: #e94483;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.footer {
+    background: linear-gradient(#1110, #333);
+    text-align: center;
+    padding: 10px;
+}
+
+.box {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 26px 0px #3330;
+}
