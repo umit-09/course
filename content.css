@@ -1,0 +1,11 @@
+.content {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 80px; /* Adjust this value to match the height of the header */
+}
+
+@media screen and (max-height: 700px) {
+    .content {
+        margin-bottom: 150px; /* Adjust this value to create space for the footer */
+    }
+}
