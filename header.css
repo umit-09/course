@@ -1,11 +1,12 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: calc(100% - 40px);
-    overflow: hidden;
-    background-color: #ff9f9f;
+    width: 100%;
+    background-color: #ff9d9d;
+    position: absolute;
     padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    left: 0px;
+    top: 0px;
 }
   
 /* Style the header links */
