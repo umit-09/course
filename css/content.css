@@ -1,5 +1,6 @@
 .content {
     padding: 20px;
+    font-size: 20px;
     box-sizing: border-box;
     margin-top: 80px; /* Adjust this value to match the height of the header */
 }
