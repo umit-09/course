@@ -3,19 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple CIT Generator</title>
+    <title>Optifine CIT Generator</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .label { margin-top: 10px; }
-        .input { width: 100%; padding: 5px; margin-top: 5px; border: 1px solid #ccc; border-radius: 3px; }
-        .input::placeholder { color: grey; }
-        .button { margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; }
-        .button:hover { background-color: #0056b3; }
-        .textarea { width: 100%; height: 200px; margin-top: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 3px; }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .label {
+            margin-top: 10px; 
+        }
+
+        .input {
+            width: 100%; padding: 5px; margin-top: 5px; border: 1px solid #ccc; border-radius: 3px;
+        }
+
+        .input::placeholder {
+            color: grey;
+        }
+
+        .button {
+            margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .textarea {
+            width: 100%; height: 200px; margin-top: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 3px;
+        }
     </style>
 </head>
 <body>
-    <h1>Simple CIT Generator</h1>
+    <h1>Optifine CIT Generator</h1>
 
     <a href="https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cit_single.properties" style="text-decoration: none;">Optifine documentation</a>
 
@@ -32,8 +52,8 @@
 
     <br><br>
 
-    <label class="label">items:</label>
-    <input id="items" class="input" placeholder="minecraft:item">
+    <label class="label">name:</label>
+    <input id="name" class="input" placeholder="Enter name">
 
     <label class="label">texture:</label>
     <input id="texture" class="input" placeholder="./texture">
@@ -71,51 +91,36 @@
     <textarea id="propertiesText" class="textarea" readonly></textarea>
 
     <script>
-        function onEntryClick(event) {
-            const input = event.target;
-            if (input.value === input.placeholder) {
-                input.value = "";
-                input.style.color = "black";
-            }
-        }
-
-        function onEntryLeave(event) {
-            const input = event.target;
-            if (!input.value) {
-                input.value = input.placeholder;
-                input.style.color = "grey";
-            }
-        }
 
         function generateProperties() {
             const properties = [];
 
-            const getTypeValue = () => document.getElementById("type").value;
             const getValue = (id) => document.getElementById(id).value;
 
-            const type = getTypeValue();
+            const type = getValue("type");
             const name = getValue("name");
             const texture = getValue("texture");
             const model = getValue("model");
             const damage = getValue("damage");
             const stackSize = getValue("stackSize");
+            const enchantments = getValue("enchantments");
+            const enchantmentLevels = getValue("enchantmentLevels");
+            const hand = getValue("hand");
+            const nbt = getValue("nbt");
 
             if (type) properties.push(`type=${type}`);
-            if (name) properties.push(`name=${name}`);
+            if (name) properties.push(`items=${name}`);
             if (texture) properties.push(`texture=${texture}`);
             if (model) properties.push(`model=${model}`);
             if (damage) properties.push(`damage=${damage}`);
             if (stackSize) properties.push(`stackSize=${stackSize}`);
+            if (enchantments) properties.push(`enchantments=${enchantments}`);
+            if (enchantmentLevels) properties.push(`enchantmentLevels=${enchantmentLevels}`);
+            if (hand) properties.push(`hand=${hand}`);
+            if (nbt) properties.push(nbt);
 
             document.getElementById("propertiesText").value = properties.join("\n");
         }
-
-        const inputs = document.querySelectorAll(".input");
-        inputs.forEach(input => {
-            input.addEventListener("focusin", onEntryClick);
-            input.addEventListener("focusout", onEntryLeave);
-            input.style.color = "grey";
-        });
 
         document.getElementById("generateButton").addEventListener("click", generateProperties);
     </script>
