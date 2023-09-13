@@ -17,25 +17,49 @@
 <body>
     <h1>Simple CIT Generator</h1>
 
-    <label class="label">Type:</label>
+    <label class="label">type:</label>
     <select id="type">
-        <option value="item" selected>Item</option>
-        <option value="enchantment">Enchantment</option>
+        <option value="item" selected>item</option>
+        <option value="enchantment">enchantment</option>
+        <option value="armor">armor</option>
+        <option value="elytra">elytra</option>
     </select>
 
     <br><br>
 
-    <label class="label">Name:</label>
-    <input id="name" class="input" placeholder="Enter name">
+    <label class="label">items:</label>
+    <input id="items" class="input" placeholder="minecraft:item">
 
-    <label class="label">Texture:</label>
-    <input id="texture" class="input" placeholder="Enter texture">
+    <label class="label">texture:</label>
+    <input id="texture" class="input" placeholder="./texture">
 
-    <label class="label">Model:</label>
-    <input id="model" class="input" placeholder="Enter model">
+    <label class="label">model:</label>
+    <input id="model" class="input" placeholder="./model">
 
-    <label class="label">Damage:</label>
-    <input id="damage" class="input" placeholder="Enter damage">
+    <label class="label">damage:</label>
+    <input id="damage" type="number" min="0" max="65535" class="input" placeholder="0 - 65535">
+
+    <label class="label">stackSize:</label>
+    <input id="stackSize" type="number" min="0" max="65535" class="input" placeholder="0 - 65535">
+
+    <label class="label">enchantments:</label>
+    <input id="enchantments" class="input" placeholder="minecraft:silk_touch sharpness smite">
+
+    <label class="label">enchantmentLevels:</label>
+    <input id="enchantmentLevels" class="input" placeholder="0 127 255">
+
+    <label class="label">hand:</label>
+    <select id="hand">
+        <option value="any" selected>any</option>
+        <option value="main">main</option>
+        <option value="off">off</option>
+    </select>
+
+    <br>
+    <br>
+
+    <label class="label">nbt:</label>
+    <input id="nbt" class="input" placeholder="nbt.<tag>=<value>">
 
     <button id="generateButton" class="button">Generate Properties</button>
 
@@ -69,12 +93,14 @@
             const texture = getValue("texture");
             const model = getValue("model");
             const damage = getValue("damage");
+            const stackSize = getValue("stackSize");
 
             if (type) properties.push(`type=${type}`);
             if (name) properties.push(`name=${name}`);
             if (texture) properties.push(`texture=${texture}`);
             if (model) properties.push(`model=${model}`);
             if (damage) properties.push(`damage=${damage}`);
+            if (stackSize) properties.push(`stackSize=${stackSize}`);
 
             document.getElementById("propertiesText").value = properties.join("\n");
         }
