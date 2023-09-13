@@ -21,7 +21,6 @@
         }
 
         .label {
-            margin-top: 10px;
             display: flex;
             flex-direction: colum;
             display: inline-block;
@@ -32,9 +31,9 @@
         .input{
             width: 240px;
             padding: 5px;
-            margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-family: quicksand;
         }
         select{
             width: 100px;
@@ -60,6 +59,7 @@
             margin-right: auto;
             width: 40%;
             margin-top: 15px;
+            font-family: quicksand;
         }
 
         .button:hover {
@@ -76,6 +76,14 @@
             margin-left: auto;
             margin-right: auto;
             margin-top: 15px;
+            font-family: quicksand;
+        }
+
+        .hr {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 510px;
         }
     </style>
 </head>
@@ -83,8 +91,8 @@
     <h1 class="center">Optifine CIT Generator</h1>
 
     <a href="https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cit_single.properties" style="text-decoration: none; margin: 0 auto; display:block; text-align: center; color:#f00;">open Optifine documentation</a>
-
-    <br>
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">type:</label>
     <select id="type">
@@ -94,28 +102,43 @@
         <option value="elytra">elytra</option>
     </select>
 
-    <br><br>
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">name:</label>
     <input id="name" class="input" placeholder="Enter name">
 
+    <hr class="hr" size="2", color="#c0c0c0">
+
     <label class="label">texture:</label>
     <input id="texture" class="input" placeholder="./texture">
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">model:</label>
     <input id="model" class="input" placeholder="./model">
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">damage:</label>
     <input id="damage" type="number" min="0" max="65535" class="input" placeholder="0 - 65535">
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">stackSize:</label>
     <input id="stackSize" type="number" min="0" max="65535" class="input" placeholder="0 - 65535">
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">enchantments:</label>
     <input id="enchantments" class="input" placeholder="minecraft:silk_touch sharpness smite">
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">enchantmentLevels:</label>
     <input id="enchantmentLevels" class="input" placeholder="0 127 255">
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">hand:</label>
     <select id="hand">
@@ -123,15 +146,14 @@
         <option value="main">main</option>
         <option value="off">off</option>
     </select>
-
-    <br>
-    <br>
+    
+    <hr class="hr" size="2", color="#c0c0c0">
 
     <label class="label">nbt:</label>
 
     <input id="nbt" class="input" placeholder="nbt.<tag>=<value>">
-
-    <br>
+    
+        <hr class="hr" size="2", color="#c0c0c0">
 
     <button id="generateButton" class="button">Generate Properties</button>
 
