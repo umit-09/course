@@ -193,7 +193,7 @@ elytra:   Elytra texture replacement.  Applies to elytra model worn by
             const filenames = splitAndTrimValues(filenamesInput);
 
             if (filenames.length === 0) {
-                alert("Please enter at least one filename.");
+                window.alert("Please enter at least one filename.");
                 return;
             }
 
@@ -266,8 +266,6 @@ elytra:   Elytra texture replacement.  Applies to elytra model worn by
     
         document.getElementById("generateButton").addEventListener("click", generateProperties);
         document.getElementById("saveButton").addEventListener("click", download);
-    </script>
-    
-    
+    </script>   
 </body>
 </html>
