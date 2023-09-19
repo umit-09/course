@@ -34,6 +34,10 @@
     margin-top: 10px;
 }
 
+.placeholder-element:hover {
+    background-color: #dbdbdb;
+}
+
 @media screen and (max-width: 768px) {
     .placeholder-element {
         width: 70%;
