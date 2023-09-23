@@ -1,81 +1,117 @@
-<link rel="stylesheet" href="./css/header.css">
-<link rel="stylesheet" href="./css/content.css">
-<link rel="stylesheet" href="./css/footer.css">
-<link rel="stylesheet" href="./css/placeholder.css">
-<link rel="stylesheet" href="./css/scrollbar.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/content.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+<link rel="stylesheet" href="./css/placeholder.css" />
+<link rel="stylesheet" href="./css/scrollbar.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+  rel="stylesheet"
+/>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
 
-        <link rel="icon" type="image/x-icon" href="./favicon.ico">
-        
-        <title>course</title>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    </head>
-    <body style="font-family: quicksand; user-select: none;">
-        <div class="header">
-            <a href="#default" class="logo">CompanyLogo</a>
-            <div class="header-right">
-                <a class="active" href="../index.html">Home</a>
-                <a href="./register.html">Register</a>
-                <a href="./index.html#lessons">Lessons</a>
-            </div>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+    <title>course</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body style="font-family: quicksand; user-select: none">
+    <div class="header">
+      <a href="#default" class="logo">CompanyLogo</a>
+      <div class="header-right">
+        <a class="active" href="../index.html">Home</a>
+        <a href="./register.html">Register</a>
+        <a href="./index.html#lessons">Lessons</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>Welcome to Online Education</p>
+      <p>Please choose a course</p>
+
+      <div class="placeholder" id="lessons">
+        <div
+          class="placeholder-element"
+          onclick="window.open('courses/chemistry.html', '_self')"
+        >
+          <img
+            src="./images/chemistry_cat.jpg"
+            alt="Chemistry"
+            draggable="false"
+            loading="lazy"
+          />
+          <h1>Chemistry</h1>
+          <p>Text for Image 1</p>
         </div>
 
-        <div class="content">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aperiam itaque aliquid accusamus sunt! Sed voluptate beatae molestiae harum error placeat, mollitia iusto est quaerat officiis modi unde corporis necessitatibus.</p>
+        <div
+          class="placeholder-element"
+          onclick="window.open('courses/physics.html', '_self')"
+        >
+          <img
+            src="./images/physics_cat.jpg"
+            alt="Physics"
+            draggable="false"
+            loading="lazy"
+          />
+          <h1>Physics</h1>
+          <p>Text for Image 2</p>
+        </div>
 
-            <div class="placeholder" id="lessons">
-                <div class="placeholder-element" onclick="window.open('courses/chemistry.html', '_self')">
-                    <img src="./images/chemistry_cat.jpg" alt="Chemistry" draggable="false" loading="lazy">
-                    <h1>Chemistry</h1>
-                    <p>Text for Image 1</p>
-                </div>
-                
-                <div class="placeholder-element" onclick="window.open('courses/physics.html', '_self')">
-                    <img src="./images/physics_cat.jpg" alt="Physics" draggable="false" loading="lazy">
-                    <h1>Physics</h1>
-                    <p>Text for Image 2</p>
-                </div>
-                
-                <div class="placeholder-element" onclick="window.open('courses/english.html', '_self')">
-                    <img src="./images/english_cat.jpg" alt="English" draggable="false" loading="lazy">
-                    <h1>English</h1>
-                    <p>Text for Image 3</p>
-                </div>
-                <div class="placeholder-element" onclick="window.open('courses/mathematics.html', '_self')">
-                    <img src="./images/math_cat.jpg" alt="Mathematics" draggable="false" loading="lazy">
-                    <h1>Mathematics</h1>
-                    <p>Text for Image 4</p>
-                </div>
-                <div class="placeholder-element" onclick="window.open('courses/coding.html', '_self')">
-                    <img src="./images/coding_cat.jpg" alt="coding" draggable="false" loading="lazy">
-                    <h1>Coding</h1>
-                    <p>Text for Image 5</p>
-                </div>
-            </div>
+        <div
+          class="placeholder-element"
+          onclick="window.open('courses/english.html', '_self')"
+        >
+          <img
+            src="./images/english_cat.jpg"
+            alt="English"
+            draggable="false"
+            loading="lazy"
+          />
+          <h1>English</h1>
+          <p>Text for Image 3</p>
         </div>
-        
-        <div class="footer">
-            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi porro nostrum quia, reiciendis harum dolor laborum asperiores iste commodi ipsam minus vero magni doloribus ex neque quos ullam deleniti.</h1>
-            <p>&copy; 2023 ???</p>
+        <div
+          class="placeholder-element"
+          onclick="window.open('courses/mathematics.html', '_self')"
+        >
+          <img
+            src="./images/math_cat.jpg"
+            alt="Mathematics"
+            draggable="false"
+            loading="lazy"
+          />
+          <h1>Mathematics</h1>
+          <p>Text for Image 4</p>
         </div>
-    </body>
+        <div
+          class="placeholder-element"
+          onclick="window.open('courses/coding.html', '_self')"
+        >
+          <img
+            src="./images/coding_cat.jpg"
+            alt="coding"
+            draggable="false"
+            loading="lazy"
+          />
+          <h1>Coding</h1>
+          <p>Text for Image 5</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h1>Online Course Education</h1>
+      <p>&copy; 2023</p>
+    </div>
+  </body>
 </html>
