@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Counter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: quicksand;
+        text-align: left;
+      }
+      #bin-counter,#oct-counter,#dec-counter, #hex-counter {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+      button {
+        font-size: 24px;
+        padding: 10px 20px;
+        margin: 0 10px;
+      }
+    </style>
+
+    <script>
+      let counter = 0;
+      let intervalId;
+
+      function increment() {
+        counter++;
+        document.getElementById('bin-counter').textContent = `Bin: ${counter.toString(2)}`;
+        document.getElementById('oct-counter').textContent = `Oct: ${counter.toString(8)}`;
+        document.getElementById('dec-counter').textContent = `Dec: ${counter.toString(10)}`;
+        document.getElementById('hex-counter').textContent = `Hex: ${counter.toString(16)}`;
+      }
+
+      function reset() {
+        counter = 0;
+        document.getElementById('bin-counter').textContent = 'Bin: 0';
+        document.getElementById('oct-counter').textContent = 'Oct: 0';
+        document.getElementById('dec-counter').textContent = 'Oct: 0';
+        document.getElementById('hex-counter').textContent = 'Hex: 0';
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        intervalId = setInterval(increment, 100);
+        document.getElementById('reset').addEventListener('click', reset);
+      });
+
+      window.addEventListener('beforeunload', function() {
+        clearInterval(intervalId);
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <h1>Counter</h1>
+    <div id="bin-counter">Bin: 0</div>
+    <div id="oct-counter">Oct: 0</div>
+    <div id="dec-counter">Oec: 0</div>
+    <div id="hex-counter">Hex: 0</div>
+    <button id="reset">Reset</button>
+  </body>
+</html>
