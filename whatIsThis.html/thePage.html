@@ -153,7 +153,7 @@
     </div>
 
     <div class="content" style="display: none;" id="nobody">
-      <p class="center"style="color:#a00; font-size:100px;" id="shake">404</p>
+      <p class="center"style="color:#a00; font-size:100px;">404</p>
       <p class="center"style="color:#a00; font-size:50px;">nice try</p>
 
       <div class="center">
@@ -164,16 +164,17 @@
   </body>
 
   <script>
-    if (confirm('Epilepsy warning!\nDo you have epilepsy?\n OK = Yes      Cancel = No')) {
-      var shakeElements = document.querySelectorAll('[id="shake"]');
-      shakeElements.forEach(function(element) {
-        element.removeAttribute('id');
-      });
-    }
-
     if (new URL(document.location).searchParams.get("pass") !== "True") {
       document.getElementById("body").style.display = "none";
       document.getElementById("nobody").style.display = "block";
+    }
+    else {
+      if (confirm('Epilepsy warning!\nDo you have epilepsy?\n OK = Yes      Cancel = No')) {
+        var shakeElements = document.querySelectorAll('[id="shake"]');
+        shakeElements.forEach(function(element) {
+          element.removeAttribute('id');
+        });
+      }
     }
 
   
