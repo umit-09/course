@@ -1,23 +1,13 @@
 #shake {
-    animation: shake 0.06s linear infinite;
+    animation: code 2s linear infinite;
+    
 }
 
-@keyframes shake {
+@keyframes code {
     0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-8px);
-        transform: translateY(-8px);
-    }
-    50% {
-        transform: translateX(0);
-        transform: translateY(8px);
+        display: none;
     }
     75% {
-        transform: translateX(-8px);
-    }
-    100% {
-        transform: translateY(0px);
+        display: none;
     }
 }
