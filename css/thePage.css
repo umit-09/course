@@ -1,5 +1,5 @@
 #shake {
-    animation: shake 0.1s linear infinite;
+    animation: shake 0.06s linear infinite;
 }
 
 @keyframes shake {
@@ -7,14 +7,15 @@
         transform: translateX(0);
     }
     25% {
-        transform: translateX(-5px);
+        transform: translateX(-8px);
+        transform: translateY(-8px);
     }
     50% {
         transform: translateX(0);
-        transform: translateY(5px);
+        transform: translateY(8px);
     }
     75% {
-        transform: translateX(-5px);
+        transform: translateX(-8px);
     }
     100% {
         transform: translateY(0px);
